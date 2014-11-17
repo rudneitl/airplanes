@@ -4,6 +4,9 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -13,7 +16,8 @@ public class PlayerDO implements AbstractDO {
 
 	private static final long serialVersionUID = -5608512093361227877L;
 
-	@Column
+	@Id
+	@GeneratedValue (strategy = GenerationType.AUTO)
 	private Integer id;
 
 	@Column
